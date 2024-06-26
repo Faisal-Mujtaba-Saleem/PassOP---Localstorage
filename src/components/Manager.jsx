@@ -29,13 +29,13 @@ const Manager = () => {
 
 
     const showPassword = (e) => {
-        if (e.target.src === `http://localhost:5173/public/icons/visible.svg`) {
-            e.target.src = `public/icons/hidden.png`;
+        if (e.target.src === `${window.location.origin}/public/icons/visible.svg` || e.target.src === `${window.location.origin}/icons/visible.svg`) {
+            e.target.src = `icons/hidden.png`;
             e.target.title = `show password`
             passwordRef.current.type = `text`;
         }
         else {
-            e.target.src = `public/icons/visible.svg`;
+            e.target.src = `icons/visible.svg`;
             e.target.title = `hide password`;
             passwordRef.current.type = `password`;
         }
